@@ -2,7 +2,7 @@
 
 An editor for TacO .trl files.
 
-Functions:
+## Functions:
  - Import track
  - Export track
  - Export JSON representation of track
