@@ -2,9 +2,6 @@ import struct
 import json
 
 
-FILE_PATH = r"C:\Users\reute\Documents\Guild Wars 2\_PvP_Pack\PR_MEGA_PACK\Data\pvp\temple_of_the_silent_storm\p_trail_001.trl"
-
-
 class track_position:
     def __init__(self, x, y, z):
         self.x = x
@@ -89,7 +86,8 @@ class track:
 
         self.version = json_data.get("version")
         self.map_id = json_data.get("map_id")
-        self.positions = [track_position(p.get("x"), p.get("y"), p.get("z")) for p in json_data.get("positions")]
+        self.positions = [track_position(p.get("x"), p.get(
+            "y"), p.get("z")) for p in json_data.get("positions")]
 
         self.buffer = class_to_b_string()
 
@@ -100,8 +98,3 @@ class track:
 
         with open(file_name, 'r') as open_file:
             self.from_json(json.load(open_file))
-
-t = track()
-t.import_trl(FILE_PATH)
-# t.export(r"C:\Users\reute\Documents\Guild Wars 2\_PvP_Pack\PR_MEGA_PACK\Data\pvp\temple_of_the_silent_storm\p_trail_001_edited.trl")
-print(t.to_json())
