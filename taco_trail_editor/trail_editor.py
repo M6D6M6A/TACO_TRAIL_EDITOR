@@ -89,7 +89,7 @@ class track:
         self.positions = [track_position(p.get("x"), p.get(
             "y"), p.get("z")) for p in json_data.get("positions")]
 
-        self.buffer = class_to_b_string()
+        self.buffer = self.class_to_b_string()
 
         return result_json
 
