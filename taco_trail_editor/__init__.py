@@ -1,1 +1,1 @@
-from .trail_editor import track, track_position
+from .trail_editor import trail, trail_position

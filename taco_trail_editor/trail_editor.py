@@ -2,14 +2,14 @@ import struct
 import json
 
 
-class track_position:
+class trail_position:
     def __init__(self, x, y, z):
         self.x = x
         self.y = y
         self.z = z
 
 
-class track:
+class trail:
     def __init__(self):
         self.file_name = None
         self.buffer = None
@@ -36,7 +36,7 @@ class track:
             position_y, = struct.unpack_from('f', self.buffer, offset + 4)
             position_z, = struct.unpack_from('f', self.buffer, offset + 8)
 
-            self.positions.append(track_position(
+            self.positions.append(trail_position(
                 position_x, position_y, position_z))
             offset += 12
 
@@ -86,7 +86,7 @@ class track:
 
         self.version = json_data.get("version")
         self.map_id = json_data.get("map_id")
-        self.positions = [track_position(p.get("x"), p.get(
+        self.positions = [trail_position(p.get("x"), p.get(
             "y"), p.get("z")) for p in json_data.get("positions")]
 
         self.buffer = self.class_to_b_string()
