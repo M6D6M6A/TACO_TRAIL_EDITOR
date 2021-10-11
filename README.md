@@ -1,6 +1,6 @@
 # TACO_TRAIL_EDITOR
 
-An editor for TacO .trl files.
+An editor for TacO .trl files. __(Work in Progress!)__
 
 ## Functions:
  - Import track
