@@ -3,7 +3,7 @@
 An editor for TacO .trl files.
 
 Functions:
- - Import tracks
- - Export Tracks
+ - Import track
+ - Export track
  - Export JSON representation of track
  - Import JSON representation of track
